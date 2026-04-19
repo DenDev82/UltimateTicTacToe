@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+body {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+}
+
+#message-display {
+  margin: 20px 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  min-width: 300px;
+}
+
+.turn-message {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.game-over {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.role-message {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.error-message {
+  background-color: #ffcdd2;
+  color: #c62828;
+}
+
+.info-message {
+  background-color: #bbdefb;
+  color: #0d47a1;
+}
+
+#game {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2px;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  position: relative;
+  border: 2px solid black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.board.active {
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.7);
+}
+
+.board.won-x {
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
+.board.won-o {
+  background-color: rgba(77, 171, 247, 0.1);
+}
+
+.board.won-draw {
+  background-color: rgba(150, 150, 150, 0.1);
+}
+
+.cell {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+  border: 1px solid black;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+.cell:hover {
+  background-color: #f0f0f0;
+}
+
+.cell.x {
+  color: #d32f2f;
+}
+
+.cell.o {
+  color: #1976d2;
+}
+
+.big-symbol {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  user-select: none;
+}
