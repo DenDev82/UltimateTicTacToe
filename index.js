@@ -1,4 +1,4 @@
-const socket = io("http://localhost:3000");
+const socket = io();
 const gameContainer = document.getElementById("game");
 const messageDisplay = document.createElement("div");
 messageDisplay.id = "message-display";
